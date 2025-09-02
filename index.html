@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guia Git e GitHub | Leonardo B. Ferretti</title>
+
+
+  <style>
+    :root {
+      --bg: #0e1117;
+      --card-bg: #161b22;
+      --text: #e6edf3;
+      --primary: #58a6ff;
+      --accent: #f78166;
+      --border: #30363d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0d1117, #1f2937);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      color: var(--primary);
+      text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+      animation: pulse 3s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px rgba(88, 166, 255, 0.5); }
+      100% { text-shadow: 0 0 20px rgba(88, 166, 255, 0.9); }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      padding: 25px 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    code {
+      background: #21262d;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-family: monospace;
+      color: var(--primary);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #0d1117;
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 1em;
+      color: var(--text);
+    }
+
+    footer strong {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guia Git & GitHub</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>O que é o Git</h2>
+      <p>O Git é um sistema de controle de versão distribuído e gratuito, criado por Linus Torvalds. Ele permite que desenvolvedores versionem, testem e colaborem em código de forma eficiente e segura.</p>
+    </section>
+
+    <section>
+      <h2>O que é o GitHub</h2>
+      <p>O GitHub é uma plataforma que hospeda repositórios Git na nuvem, permitindo colaboração, controle de versão, integração com CI/CD, pull requests e muito mais.</p>
+    </section>
+
+    <section>
+      <h2>Diferenças entre Git e GitHub</h2>
+      <ul>
+        <li><strong>Git:</strong> ferramenta de versionamento local.</li>
+        <li><strong>GitHub:</strong> serviço online para armazenar e gerenciar repositórios Git.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Principais comandos Linux para usar no Git Bash</h2>
+      <ul>
+        <li><code>ls</code> – Lista arquivos e pastas</li>
+        <li><code>cd</code> – Acessa diretórios</li>
+        <li><code>mkdir</code> – Cria diretórios</li>
+        <li><code>touch</code> – Cria arquivos</li>
+        <li><code>clear</code> – Limpa o terminal</li>
+        <li><code>rm</code> – Remove arquivos</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Comandos Linux do repositório <a href="https://github.com/caixetovisk/aula_git" target="_blank">aula_git</a></h2>
+      <ul>
+        <li><code>mkdir aula_git</code></li>
+        <li><code>cd aula_git</code></li>
+        <li><code>touch index.html</code></li>
+        <li><code>code .</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como criar um repositório no GitHub</h2>
+      <ol>
+        <li>Entre no <a href="https://github.com" target="_blank">GitHub</a></li>
+        <li>Clique em <strong>New repository</strong></li>
+        <li>Dê um nome, configure visibilidade, adicione README (opcional)</li>
+        <li>Clique em <strong>Create repository</strong></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Como ligar em um projeto existente na máquina</h2>
+      <ol>
+        <li>Abra o terminal na pasta do projeto</li>
+        <li><code>git init</code></li>
+        <li><code>git remote add origin URL_DO_REPOSITORIO</code></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Como gerar uma versão com Git</h2>
+      <ol>
+        <li><code>git add .</code></li>
+        <li><code>git commit -m "Mensagem do commit"</code></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Como enviar da máquina para o GitHub</h2>
+      <ol>
+        <li><code>git push -u origin main</code></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <strong>Leonardo Bepler Ferretti</strong></p>
+    <p id="dataAtual"></p>
+  </footer>
+
+  <script>
+    const data = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formatada = data.toLocaleDateString('pt-BR', options);
+    document.getElementById('dataAtual').textContent = `Hoje é ${formatada}`;
+  </script>
+
+</body>
+</html>
